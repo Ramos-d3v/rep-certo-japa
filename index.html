@@ -3,61 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Robo Otto</title>
-    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Site Robô Otto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <main>
-        <div class="logo">
-            <img src="img/ottologo.jpg" alt="Robo Otto" width="20%" height="20%">
-        </div>
-        <h1 class="manchete">Robo Otto</h1>
-        <h2 class="headline">O que ele consegue fazer?</h2>
+<body class="bg-otto">
+    <main class="container">
+        <header class="header">
+            <img src="img/ottologo.jpg" alt="Robo Otto" class="logo-img">
+            <h1 class="manchete">Robô Otto</h1>
+            <h2 class="headline">O que ele consegue fazer?</h2>
+        </header>
 
-        <div class="video">
-            <source src="video/ottomovie.mp4" type="video/mp4">
-        </div>
-        <article>
-            <h1> Quem é Otto?</h1>
-            <p> Otto é um robô interativo que qualquer um pode fazer</p> <figure>
-                <img src ="img/otto.jpg" alt="Mãe e filho montando um robo" width="35%" height="35%">
+        <section class="video-section">
+            <video controls class="modern-video">
+                <source src="video/ottomovie.mp4" type="video/mp4">
+                Seu navegador não suporta o formato de vídeo.
+            </video>
+        </section>
+
+        <article class="card">
+            <h2>Quem é Otto?</h2>
+            <p>Otto é um robô interativo que qualquer um pode construir e programar de forma fácil.</p>
+            <figure class="image-wrapper">
+                <img src="img/otto.jpg" alt="Mãe e filho montando um robo">
             </figure>
         </article>
 
-        <div class="kibotto">
+        <section class="kibotto card">
             <h2>Kit Básico Otto</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Componentes</th>
-                        <th>Qualidade</th> </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Pés em PLA branco</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Pernas em PLA branco</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Corpo em PLA branco</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Cabeça verde em PLA branco</td>
-                        <td>1</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <div class="table-container">
+                <table class="modern-table">
+                    <thead>
+                        <tr>
+                            <th>Componentes</th>
+                            <th>Quantidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Pés em PLA branco</td><td>2</td></tr>
+                        <tr><td>Pernas em PLA branco</td><td>2</td></tr>
+                        <tr><td>Corpo em PLA branco</td><td>2</td></tr>
+                        <tr><td>Cabeça verde em PLA branco</td><td>1</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
         <div class="btn-produto">
-            <a href="produto.html">
-                <button>Conheça o Produto Completo</button>
-            </a>
+            <a href="produto.html" class="btn">Conheça o Clube Londrina</a>
         </div>
     </main>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

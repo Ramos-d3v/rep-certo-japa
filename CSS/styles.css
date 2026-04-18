@@ -1,71 +1,189 @@
-body {
-    /* background-color:#3cb371;*/
-    background-image: url("../img/bgotto.jpg");
-    background-repeat: repeat;
-    background-size: 100%;
-    font-family: 'Lato', sans-serif;
-    line-height: 1.5;
-    color: white;
+/* Definição de Variáveis e Reset */
+:root {
+    --primary-color: #00a8ff;
+    --primary-hover: #0097e6;
+    --bg-overlay: rgba(15, 23, 42, 0.85); /* Fundo escuro transparente */
+    --card-bg: rgba(255, 255, 255, 0.05); /* Fundo dos cartões */
+    --text-color: #f8fafc;
+    --font-main: 'Poppins', sans-serif;
 }
 
-main {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 5px 40px;
-    margin-top: 20px;
-    border-radius: 10px;
-}
-
-.logo,
-.manchete,
-.headline {
+* {
+    box-sizing: border-box;
     margin: 0;
-    text-align: center;
+    padding: 0;
 }
 
-article {
-    text-align: center;
-    font-style: normal;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    background-color: #1e293b; /* Fallback color */
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
 }
 
-.kibotto {
-    margin: 30px 0;
-    text-align: center;
+/* Planos de fundo baseados na página */
+body.bg-otto { background-image: url("../img/bgotto.jpg"); }
+body.bg-londrina { background-image: url("../img/fundo.jpg"); }
+
+/* Container Principal com Glassmorphism */
+.container {
+    background: var(--bg-overlay);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 850px;
     width: 100%;
+    border-radius: 20px;
+    padding: 50px 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
 }
 
-.kibotto table {
-    background: rgba(130, 65, 130, 0.6);
-    border-radius: 10px;
-    padding: 10px;
-    margin: auto;
+/* Cabeçalho */
+.header {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
+.logo-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: contain;
+    background: #fff; /* Fundo branco pra imagem não sumir */
+    border: 4px solid var(--primary-color);
+    margin-bottom: 20px;
+    box-shadow: 0 0 25px rgba(0, 168, 255, 0.3);
+}
+
+.manchete {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    background: linear-gradient(90deg, #ffffff, #a5b4fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.headline {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #cbd5e1;
+}
+
+/* Estilo de Cartões para os Articles */
+.card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: #e2e8f0;
+    margin-bottom: 20px;
+}
+
+/* Imagens e Vídeos */
+.image-wrapper img, .modern-video {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+    display: block;
+}
+
+figcaption {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    color: #94a3b8;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Tabela Moderna */
+.table-container { overflow-x: auto; }
+
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.modern-table th, .modern-table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.modern-table th {
+    background-color: rgba(0, 168, 255, 0.15);
+    color: #fff;
+    font-weight: 600;
+}
+
+.modern-table tbody tr:last-child td { border-bottom: none; }
+.modern-table tbody tr:hover { background-color: rgba(255, 255, 255, 0.05); }
+
+/* Botões */
 .btn-produto {
     text-align: center;
-    margin: 30px 0;
+    margin-top: 50px;
 }
 
-.btn-produto a {
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
     text-decoration: none;
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 168, 255, 0.4);
+    border: none;
+    cursor: pointer;
 }
 
-.btn-produto button {
-    background-color: rgba(54, 135, 165, 0.8);
-    color: white;
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 12px 30px;
-    font-size: 18px;
-    font-family: 'Lato', sans-serif;
+.btn:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 168, 255, 0.6);
 }
 
-.Londrina {
-    background-image: url("../img/fundo.jpg");
-    background-repeat: repeat;
-    background-size: 100%;
-    font-family: 'Lato', sans-serif;
-    line-height: 1.5;
-    color: white;   
+/* Classes controladas pelo JavaScript (Animações) */
+.js-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.js-show {
+    opacity: 1;
+    transform: translateY(0);
 }
