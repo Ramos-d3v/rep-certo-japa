@@ -1,0 +1,71 @@
+body {
+    /* background-color:#3cb371;*/
+    background-image: url("../img/bgotto.jpg");
+    background-repeat: repeat;
+    background-size: 100%;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    color: white;
+}
+
+main {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 40px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.logo,
+.manchete,
+.headline {
+    margin: 0;
+    text-align: center;
+}
+
+article {
+    text-align: center;
+    font-style: normal;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.kibotto {
+    margin: 30px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.kibotto table {
+    background: rgba(130, 65, 130, 0.6);
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+}
+
+.btn-produto {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.btn-produto a {
+    text-decoration: none;
+}
+
+.btn-produto button {
+    background-color: rgba(54, 135, 165, 0.8);
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+}
+
+.Londrina {
+    background-image: url("../img/fundo.jpg");
+    background-repeat: repeat;
+    background-size: 100%;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    color: white;   
+}
